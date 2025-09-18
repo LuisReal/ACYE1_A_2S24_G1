@@ -1,0 +1,13 @@
+Primero entrar a hasta la carpeta server
+luego hacer:
+source backend/bin/activate
+
+Luego de ya ingresar al entorno virtual
+entrar a carpeta server
+en server ejecutar
+python3 main.py
+
+Para levantar el front en otra terminal
+acceder a la carpeta Arqui1
+despues usar el comando
+npm run dev
