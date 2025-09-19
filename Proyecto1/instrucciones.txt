@@ -1,3 +1,5 @@
+Este proyecto fue realizado en Grupo utilizando una Raspberry pi con sensores, usando una base de datos MongoDB en la nube con AWS
+
 Primero entrar a hasta la carpeta server
 luego hacer:
 source backend/bin/activate
