@@ -4,7 +4,6 @@
 import asyncio
 import websockets
 import json
-import random
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 
@@ -291,7 +290,7 @@ async def sensor_data(websocket, path):
         #temperature.temperature
         #temperature.fecha
         
-        await websocket.send(json.dumps(sensor_data))
+        await websocket.send(json.dumps(sensor_data)) #se envia al componente Dashboard
         await asyncio.sleep(2)  # Envía datos cada 2 segundos
         
 

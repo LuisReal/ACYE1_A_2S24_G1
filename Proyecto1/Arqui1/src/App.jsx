@@ -97,7 +97,7 @@ import {
 
           
         </div>
-
+      
         <Routes>
           <Route path="/" element={<Dashboard sensorData={sensorData}/>}></Route>
           <Route path="/login" element={<Login/>}></Route>

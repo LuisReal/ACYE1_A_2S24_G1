@@ -1,6 +1,6 @@
 
 
-export default function Control() {
+export default function Control() {  // esto es un componente y esta disponible para ser usado en otro
   
 
   const encenderLuces = async(e) => {

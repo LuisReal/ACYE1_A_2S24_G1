@@ -7,7 +7,7 @@ import raspberryIMG from "../assets/rapsberry.png";
 import domotica1IMG from "../assets/domotica1.jpg"; // importantes hacer esto para que las imagenes sean importadas con npm run build
 
 
-export default function Login() {
+export default function Login() { // esto es un componente y esta disponible para ser usado en otro
   
   
   const navigate = useNavigate()
@@ -38,7 +38,7 @@ export default function Login() {
     <>
       
       
-      <div style={{position: "relative",  marginLeft:290}}>
+      <div style={{position: "relative",  marginLeft:280}}>
 
             <div className="sidenav">
                     

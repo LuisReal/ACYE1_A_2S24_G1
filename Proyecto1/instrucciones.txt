@@ -11,3 +11,6 @@ Para levantar el front en otra terminal
 acceder a la carpeta Arqui1
 despues usar el comando
 npm run dev
+
+credenciales del administrador
+user: admin  password:123

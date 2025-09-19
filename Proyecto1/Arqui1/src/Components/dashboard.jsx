@@ -23,7 +23,7 @@ import {
     Legend
   );
 
-export default function Dashboard({ sensorData }) {
+export default function Dashboard({ sensorData }) { // esto es un componente y esta disponible para ser usado en otro
 
 
   // Configuración de la gráfica
@@ -39,77 +39,77 @@ export default function Dashboard({ sensorData }) {
     }
     
     ]
-}
-
-const chartLight = {
-  labels: sensorData.fecha_luz, // ["12:00", "12:01", "12:02", "12:03", "12:04"],
-  datasets: [
-  {
-      label: "Light ",
-      data: sensorData.light,//[300, 450, 500, 600, 650],
-      borderColor: "rgba(54, 162, 235, 1)",
-      fill: false,
-      tension: 0.1
   }
-  
-  ]
-}
 
-const chartAir = {
-  labels: sensorData.fecha_air, // ["12:00", "12:01", "12:02", "12:03", "12:04"],
-  datasets: [
-  {
-      label: "Aire",
-      data: sensorData.air,//[300, 450, 500, 600, 650],
-      borderColor: "rgba(29, 234, 91, 1)", //29, 234, 91
-      fill: false,
-      tension: 0.1
-  }
-  
-  ]
-}
-
-const chartIngreso = {
-  labels: sensorData.fecha_ingreso, // ["12:00", "12:01", "12:02", "12:03", "12:04"],
-  datasets: [
-  {
-      label: "Ingreso Casa",
-      data: sensorData.ingreso,//[300, 450, 500, 600, 650],
-      borderColor: "rgba(218, 238, 18, 1)", //218, 238, 18 
-      fill: false,
-      tension: 0.1
-  }
-  
-  ]
-}
-
-
-const chartTanque = {
-  labels: sensorData.fecha_tanque,
-  datasets: [
-  {
-      label: "Tanque de Agua",
-      data: sensorData.tanque,
-      borderColor: "rgba(161, 18, 238, 1)", //161, 18, 238
-      fill: false,
-      tension: 0.1
-  }
-  
-  ]
-}
-
-const options = {
-    responsive: true,
-    plugins: {
-      legend: {
-        position: 'top',
-      },
-      title: {
-        display: true,
-        text: 'Sensor Data',
-      }
+  const chartLight = {
+    labels: sensorData.fecha_luz, // ["12:00", "12:01", "12:02", "12:03", "12:04"],
+    datasets: [
+    {
+        label: "Light ",
+        data: sensorData.light,//[300, 450, 500, 600, 650],
+        borderColor: "rgba(54, 162, 235, 1)",
+        fill: false,
+        tension: 0.1
     }
-}
+    
+    ]
+  }
+
+  const chartAir = {
+    labels: sensorData.fecha_air, // ["12:00", "12:01", "12:02", "12:03", "12:04"],
+    datasets: [
+    {
+        label: "Aire",
+        data: sensorData.air,//[300, 450, 500, 600, 650],
+        borderColor: "rgba(29, 234, 91, 1)", //29, 234, 91
+        fill: false,
+        tension: 0.1
+    }
+    
+    ]
+  }
+
+  const chartIngreso = {
+    labels: sensorData.fecha_ingreso, // ["12:00", "12:01", "12:02", "12:03", "12:04"],
+    datasets: [
+    {
+        label: "Ingreso Casa",
+        data: sensorData.ingreso,//[300, 450, 500, 600, 650],
+        borderColor: "rgba(218, 238, 18, 1)", //218, 238, 18 
+        fill: false,
+        tension: 0.1
+    }
+    
+    ]
+  }
+
+
+  const chartTanque = {
+    labels: sensorData.fecha_tanque,
+    datasets: [
+    {
+        label: "Tanque de Agua",
+        data: sensorData.tanque,
+        borderColor: "rgba(161, 18, 238, 1)", //161, 18, 238
+        fill: false,
+        tension: 0.1
+    }
+    
+    ]
+  }
+
+  const options = {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top',
+        },
+        title: {
+          display: true,
+          text: 'Sensor Data',
+        }
+      }
+  }
 
   return (
     <div>

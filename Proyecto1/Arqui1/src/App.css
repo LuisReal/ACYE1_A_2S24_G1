@@ -74,13 +74,14 @@
 .sidenav {
 
   background-image: url("./assets/fondo.jpg") !important;
-  border-style: groove;
-  margin: -10px -10px -150px -10px;
-  width:1250px;
+  /*border-style: groove;*/
+  
+  /*margin: -10px -10px -150px -10px;*/
+  width: 100%;
   height: 300px;
   
   border-color: black;
-  border-style: groove;
+  /*border-style: groove;*/
  /*padding-top: 20px;*/
 }
 
