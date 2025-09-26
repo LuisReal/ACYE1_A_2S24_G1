@@ -24,7 +24,7 @@ export default function Login() { // esto es un componente y esta disponible par
     //grupo#_seccion_proy1
     if(username == "admin" & password == "123"){
         
-        
+        localStorage.setItem("auth", "true");
         navigate(`/control`)
         
     }else{

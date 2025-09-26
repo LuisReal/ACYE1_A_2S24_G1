@@ -1,7 +1,16 @@
-
+import { useNavigate } from "react-router-dom";
+import  { useEffect } from "react";
 
 export default function Control() {  // esto es un componente y esta disponible para ser usado en otro
   
+    const navigate = useNavigate()
+
+    useEffect(() => {
+    const auth = localStorage.getItem("auth");
+    if (auth !== "true") {
+      navigate("/login"); 
+    }
+  }, [navigate]);
 
   const encenderLuces = async(e) => {
     e.preventDefault();
@@ -63,6 +72,10 @@ const logout = async(e) => {
     e.preventDefault();
 
     alert("cerrando sesion")
+    localStorage.removeItem("auth");
+
+    // Redirigir al login
+    navigate(`/login`);
 
 }
 
@@ -73,7 +86,7 @@ const logout = async(e) => {
       <div className="contenedor" >
 
             <div>
-              <button onClick={() => logout()}  id="btn-logout"  className="btn btn-danger" aria-current="page">Logout </button>
+              <button onClick={logout}  id="btn-logout"  className="btn btn-danger" aria-current="page">Logout </button>
             </div>
 
             <div className="luces">
